@@ -1,0 +1,32 @@
+.loading {
+  width: 80px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.loading span {
+  height: 20px;
+  width: 20px;
+  float: left;
+  margin-right: 10px;
+  background: green;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 15px green;
+  -moz-box-shadow: 0px 0px 15px green;
+  box-shadow: 0px 0px 15px green;
+}
+
+.loading span:first-child {
+  background: red;
+  -webkit-box-shadow: 0px 0px 15px red;
+  -moz-box-shadow: 0px 0px 15px red;
+  box-shadow: 0px 0px 15px red;
+}
+
+.loading span:last-child {
+  margin: 0;
+  background: blue;
+  -webkit-box-shadow: 0px 0px 15px blue;
+  -moz-box-shadow: 0px 0px 15px blue;
+  box-shadow: 0px 0px 15px blue;
+}

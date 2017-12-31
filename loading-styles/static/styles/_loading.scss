@@ -1,0 +1,17 @@
+.loading{
+ position: absolute;
+ width: auto;
+ margin: 0 auto;
+ span{
+  height: 20px;
+  width: 20px;
+  background: green;
+  border-radius: 50%;
+ }
+  &:first-child{
+   background: red;     
+  }
+  &:last-child{
+   background: blue;
+  }
+}
