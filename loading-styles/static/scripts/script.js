@@ -1,8 +1,11 @@
 $(document).ready(function(){
  let spanCount = $(".loading").attr("ld-items");
- let spanWidth = $(".loading").attr("ld-width");
+ let spanDimension = $(".loading").attr("ld-width");
  let spanMargin = $(".loading").attr("ld-margin");
  let spanDelay = $(".loading").attr("ld-delay-in-seconds");
+ let loadingStyle = $(".loading").attr("ld-loading-style");
+ let borderWidth = $(".loading").attr("ld-border-width");
+
  let displayTime = spanDelay * 1000;
  var _html="";
  if($(".loading").empty()){
@@ -10,10 +13,18 @@ $(document).ready(function(){
    let _opacity = s+1;
    _opacity = _opacity/spanCount;
    _opacity =  1.25 - _opacity;
-   console.log(_opacity);
-   _html += "<span style='width:"+spanWidth+"px; height:"+spanWidth+"px; margin-right:"+spanMargin+"px; opacity:"+_opacity+"'></span>";
+   if(loadingStyle === "dashed"){
+    if(!borderWidth){
+      borderWidth = "5px";
+    }
+_html += "<span class='dashed' style='width:"+spanDimension+"px; height:"+borderWidth+"px; margin-right:"+spanMargin+"px; opacity:"+_opacity+"; border-radius:0%'></span>";
+   }else{
+    borderWidth = "50";
+   _html += "<span style='width:"+spanDimension+"px; height:"+spanDimension+"px; margin-right:"+spanMargin+"px; opacity:"+_opacity+"; border-radius:"+borderWidth+"%'></span>";
   }
-  $(".loading").html(_html);
+}
+  $(".loading").css("height",spanDimension+"px").html(_html);
+ $(".loading").width($(".loading span").outerWidth(true) * spanCount)
  }
   function loadingSpan(){
    let spanItem = $(".loading span.active");

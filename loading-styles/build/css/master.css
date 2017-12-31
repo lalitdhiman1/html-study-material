@@ -1,16 +1,24 @@
 .loading {
-  height: 80px;
-  margin: 0 auto;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .loading span {
   float: left;
-  background: orange;
-  border-radius: 50%;
+  background: #1b83bc;
 }
 
 .loading span.active {
-  -webkit-box-shadow: 0px 0px 45px orange;
-  -moz-box-shadow: 0px 0px 45px orange;
-  box-shadow: 0px 0px 45px orange;
+  transform: scale(0.5, 0.5);
+  -webkit-box-shadow: 0px 0px 45px #1e93d2;
+  -moz-box-shadow: 0px 0px 45px #1e93d2;
+  box-shadow: 0px 0px 45px #1e93d2;
+}
+
+.loading span.active.dashed {
+  transform: scale(1.5, 1.5);
 }

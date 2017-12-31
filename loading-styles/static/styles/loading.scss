@@ -9,17 +9,21 @@
     box-shadow: 0px 0px 45px $color;
   }
  }
-$back-color:orange;
+$back-color:#1e93d2;
 
 .loading{
- height: 80px;
- margin: 0 auto;
+ margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
  span{
   float: left;
-  background: $back-color;
-  border-radius: 50%;
+  background: darken($back-color, 5%);
   &.active{
+  transform:scale(0.5,0.5);
    @include box-shadow($back-color);
+  }
+  &.active.dashed{
+  transform:scale(1.5,1.5);
   }
 
  }
