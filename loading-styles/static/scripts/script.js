@@ -1,15 +1,25 @@
 $(document).ready(function(){
-  function loadingSpan(){
-   // $(".loading span").each(function(){
-   //  if($(this).hasClass("active")){
-   //   $(this).removeClass("active");
-   //   $(this).next().addClass("active");
-   //  }
-   // })
-   let countSpan = $(".loading span").length;
-   for(var i = 0; i < countSpan; i++){
-    $(".loading span:eq("+i+")").html(i)
-   }
+ let spanCount = $(".loading").attr("ld-items");
+ let spanWidth = $(".loading").attr("ld-width");
+ let spanMargin = $(".loading").attr("ld-margin");
+ let spanDelay = $(".loading").attr("ld-delay-in-seconds");
+ let displayTime = spanDelay * 1000;
+ var _html="";
+ if($(".loading").empty()){
+  for(var s=0; s < spanCount; s++){
+   _html += "<span style='width:"+spanWidth+"px; height:"+spanWidth+"px; margin-right:"+spanMargin+"px;'></span>";
   }
-  setInterval(loadingSpan, 3000)
+  $(".loading").html(_html);
+  console.log($(".loading").innerWidth());
+ }
+  function loadingSpan(){
+   let spanItem = $(".loading span.active");
+   spanItem.removeClass("active");
+   spanItem.next().addClass('active');
+   if(spanItem.next().length == 0){
+   $('.loading span').first().addClass('active');
+ }
+
+  }
+  setInterval(loadingSpan, displayTime)
 })

@@ -1,43 +1,36 @@
 .loading {
-  width: 80px;
   height: 80px;
   margin: 0 auto;
 }
 
 .loading span {
-  height: 60px;
-  width: 60px;
   float: left;
-  margin-bottom: 30px;
-  background: green;
+  background: orange;
   border-radius: 50%;
 }
 
 .loading span.active {
-  -webkit-box-shadow: 0px 0px 45px green;
-  -moz-box-shadow: 0px 0px 45px green;
-  box-shadow: 0px 0px 45px green;
-  transition: box-shadow 5s ease-in-out;
+  -webkit-box-shadow: 0px 0px 45px orange;
+  -moz-box-shadow: 0px 0px 45px orange;
+  box-shadow: 0px 0px 45px orange;
 }
 
 .loading span:first-child {
-  background: red;
+  background: #e69500;
 }
 
 .loading span:first-child.active {
-  -webkit-box-shadow: 0px 0px 45px red;
-  -moz-box-shadow: 0px 0px 45px red;
-  box-shadow: 0px 0px 45px red;
-  transition: box-shadow 5s ease-in-out;
+  -webkit-box-shadow: 0px 0px 45px #e69500;
+  -moz-box-shadow: 0px 0px 45px #e69500;
+  box-shadow: 0px 0px 45px #e69500;
 }
 
 .loading span:last-child {
-  background: blue;
+  background: #ffc04d;
 }
 
 .loading span:last-child.active {
-  -webkit-box-shadow: 0px 0px 45px blue;
-  -moz-box-shadow: 0px 0px 45px blue;
-  box-shadow: 0px 0px 45px blue;
-  transition: box-shadow 5s ease-in-out;
+  -webkit-box-shadow: 0px 0px 45px #ffc04d;
+  -moz-box-shadow: 0px 0px 45px #ffc04d;
+  box-shadow: 0px 0px 45px #ffc04d;
 }
