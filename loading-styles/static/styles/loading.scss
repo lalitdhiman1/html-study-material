@@ -9,32 +9,19 @@
     box-shadow: 0px 0px 45px $color;
   }
  }
-$secondSpan:orange;
-$firstSpan: darken($secondSpan, 5%);
-$thirdSpan: lighten($secondSpan, 15%);
+$back-color:orange;
 
 .loading{
  height: 80px;
  margin: 0 auto;
  span{
   float: left;
-  background: $secondSpan;
+  background: $back-color;
   border-radius: 50%;
   &.active{
-   @include box-shadow($secondSpan);
+   @include box-shadow($back-color);
   }
-  &:first-child{
-   background: $firstSpan;
-   &.active{
-    @include box-shadow($firstSpan);
-   }
-  }
-  &:last-child{
-   background: $thirdSpan;
-   &.active{
-    @include box-shadow($thirdSpan);
-   }
-  }
+
  }
 
 }

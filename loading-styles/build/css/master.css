@@ -14,23 +14,3 @@
   -moz-box-shadow: 0px 0px 45px orange;
   box-shadow: 0px 0px 45px orange;
 }
-
-.loading span:first-child {
-  background: #e69500;
-}
-
-.loading span:first-child.active {
-  -webkit-box-shadow: 0px 0px 45px #e69500;
-  -moz-box-shadow: 0px 0px 45px #e69500;
-  box-shadow: 0px 0px 45px #e69500;
-}
-
-.loading span:last-child {
-  background: #ffc04d;
-}
-
-.loading span:last-child.active {
-  -webkit-box-shadow: 0px 0px 45px #ffc04d;
-  -moz-box-shadow: 0px 0px 45px #ffc04d;
-  box-shadow: 0px 0px 45px #ffc04d;
-}

@@ -7,10 +7,13 @@ $(document).ready(function(){
  var _html="";
  if($(".loading").empty()){
   for(var s=0; s < spanCount; s++){
-   _html += "<span style='width:"+spanWidth+"px; height:"+spanWidth+"px; margin-right:"+spanMargin+"px;'></span>";
+   let _opacity = s+1;
+   _opacity = _opacity/spanCount;
+   _opacity =  1.25 - _opacity;
+   console.log(_opacity);
+   _html += "<span style='width:"+spanWidth+"px; height:"+spanWidth+"px; margin-right:"+spanMargin+"px; opacity:"+_opacity+"'></span>";
   }
   $(".loading").html(_html);
-  console.log($(".loading").innerWidth());
  }
   function loadingSpan(){
    let spanItem = $(".loading span.active");
