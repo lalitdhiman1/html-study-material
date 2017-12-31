@@ -1,32 +1,43 @@
 .loading {
   width: 80px;
-  height: 40px;
+  height: 80px;
   margin: 0 auto;
 }
 
 .loading span {
-  height: 20px;
-  width: 20px;
+  height: 60px;
+  width: 60px;
   float: left;
-  margin-right: 10px;
+  margin-bottom: 30px;
   background: green;
   border-radius: 50%;
-  -webkit-box-shadow: 0px 0px 15px green;
-  -moz-box-shadow: 0px 0px 15px green;
-  box-shadow: 0px 0px 15px green;
+}
+
+.loading span.active {
+  -webkit-box-shadow: 0px 0px 45px green;
+  -moz-box-shadow: 0px 0px 45px green;
+  box-shadow: 0px 0px 45px green;
+  transition: box-shadow 5s ease-in-out;
 }
 
 .loading span:first-child {
   background: red;
-  -webkit-box-shadow: 0px 0px 15px red;
-  -moz-box-shadow: 0px 0px 15px red;
-  box-shadow: 0px 0px 15px red;
+}
+
+.loading span:first-child.active {
+  -webkit-box-shadow: 0px 0px 45px red;
+  -moz-box-shadow: 0px 0px 45px red;
+  box-shadow: 0px 0px 45px red;
+  transition: box-shadow 5s ease-in-out;
 }
 
 .loading span:last-child {
-  margin: 0;
   background: blue;
-  -webkit-box-shadow: 0px 0px 15px blue;
-  -moz-box-shadow: 0px 0px 15px blue;
-  box-shadow: 0px 0px 15px blue;
+}
+
+.loading span:last-child.active {
+  -webkit-box-shadow: 0px 0px 45px blue;
+  -moz-box-shadow: 0px 0px 45px blue;
+  box-shadow: 0px 0px 45px blue;
+  transition: box-shadow 5s ease-in-out;
 }

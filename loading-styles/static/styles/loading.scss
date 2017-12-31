@@ -1,13 +1,14 @@
-@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+@mixin box-shadow($color, $inset: false) {
   @if $inset {
-    -webkit-box-shadow:inset $top $left $blur $color;
-    -moz-box-shadow:inset $top $left $blur $color;
-    box-shadow:inset $top $left $blur $color;
+    -webkit-box-shadow:inset 0px 0px 45px $color;
+    -moz-box-shadow:inset 0px 0px 45px $color;
+    box-shadow:inset 0px 0px 45px $color;
   } @else {
-    -webkit-box-shadow: $top $left $blur $color;
-    -moz-box-shadow: $top $left $blur $color;
-    box-shadow: $top $left $blur $color;
+    -webkit-box-shadow: 0px 0px 45px $color;
+    -moz-box-shadow: 0px 0px 45px $color;
+    box-shadow: 0px 0px 45px $color;
   }
+  transition: box-shadow 5s ease-in-out;;
 }
 $firstSpan: red;
 $secondSpan: green;
@@ -15,24 +16,29 @@ $thirdSpan: blue;
 
 .loading{
  width: 80px;
- height: 40px;
+ height: 80px;
  margin: 0 auto;
  span{
-  height: 20px;
-  width: 20px;
+  height: 60px;
+  width: 60px;
   float: left;
-  margin-right: 10px;
+  margin-bottom: 30px;
   background: $secondSpan;
   border-radius: 50%;
-  @include box-shadow(0px, 0px, 15px, $secondSpan);
+  &.active{
+   @include box-shadow($secondSpan);
+  }
   &:first-child{
    background: $firstSpan;
-   @include box-shadow(0px, 0px, 15px, $firstSpan);
+   &.active{
+    @include box-shadow($firstSpan);
+   }
   }
   &:last-child{
-   margin: 0;
    background: $thirdSpan;
-   @include box-shadow(0px, 0px, 15px, $thirdSpan);
+   &.active{
+    @include box-shadow($thirdSpan);
+   }
   }
  }
 
